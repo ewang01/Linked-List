@@ -10,8 +10,8 @@ public class LinkedList {
 			next = null;
 		}
 	}
-	// there are four different conditions
 	// return the head of the linked list after operation
+	// there are three different append conditions
 	public Node appendHead(Node head, int element) {
 		// append an element to the head of a linked list
 		Node newHead = new Node(element);
@@ -81,35 +81,36 @@ public class LinkedList {
 	}
 	
 	public static void main(String[] args) {
+		// Test
 		LinkedList llist = new LinkedList();
 		Node node = head;
 		
-		node=llist.appendHead(node,6);
-		node=llist.appendAfter(node,7);
-		node=llist.appendEnd(node,4);
-		node=llist.appendEnd(node,9);
-		node=llist.appendEnd(node,10);
-		node=llist.appendEnd(node,12);
+		node = llist.appendHead(node,6);
+		node = llist.appendAfter(node,7);
+		node = llist.appendEnd(node,4);
+		node = llist.appendEnd(node,9);
+		node = llist.appendEnd(node,10);
+		node = llist.appendEnd(node,12);
 		head = node;
 		
         System.out.println("Created Linked list is: ");
         while (node != null)
         {
-            System.out.print(node.value+"->");
+            System.out.print(node.value + "->");
             node = node.next;
         }
         System.out.println("\nCreated Linked list is: ");
 		node=llist.removeTail(head);
         while (node != null)
         {
-            System.out.print(node.value+"->");
+            System.out.print(node.value + "->");
             node = node.next;
         }
         System.out.println("\nCreated Linked list is: ");
-		node=llist.removeGreaterThanTarget(head,7);
+		node=llist.removeGreaterThanTarget(head, 7);
         while (node != null)
         {
-            System.out.print(node.value+"->");
+            System.out.print(node.value + "->");
             node = node.next;
         }
 	}
